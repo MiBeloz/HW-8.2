@@ -6,89 +6,102 @@ int main() {
 
 	std::cout << "Фигуры. Методы\n\n" << std::endl;
 
+	Figure* figure = nullptr;
+
 	try {
-		Figure* figure = new Figure();
-		std::cout << figure->onCreate() << std::endl;
+		figure = new Figure();
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* triangle = new Triangle(10, 20, 30, 50, 60, 70);
-		std::cout << triangle->onCreate() << std::endl;
+		figure = new Triangle(10, 20, 30, 50, 60, 70);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch(error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* rightTriangle = new RightTriangle(10, 20, 30, 50, 60);
-		std::cout << rightTriangle->onCreate() << std::endl;
+		figure = new RightTriangle(10, 20, 30, 50, 60);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* rightTriangle = new RightTriangle(10, 20, 30, 50, 40);
-		std::cout << rightTriangle->onCreate() << std::endl;
+		figure = new RightTriangle(10, 20, 30, 50, 40);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* isoscelesTriangle = new IsoscelesTriangle(10, 20, 50, 60);
-		std::cout << isoscelesTriangle->onCreate() << std::endl;
+		figure = new IsoscelesTriangle(10, 20, 50, 60);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* equilateralTriangle = new EquilateralTriangle(30);
-		std::cout << equilateralTriangle->onCreate() << std::endl;
+		figure = new EquilateralTriangle(30);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* quadrilateral = new Quadrilateral(10, 20, 30, 40, 50, 60, 70, 80);
-		std::cout << quadrilateral->onCreate() << std::endl;
+		figure = new Quadrilateral(10, 20, 30, 40, 50, 60, 70, 80);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* rectangle = new Rectangle(10, 20);
-		std::cout << rectangle->onCreate() << std::endl;
+		figure = new Rectangle(10, 20);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* square = new Square(20);
-		std::cout << square->onCreate() << std::endl;
+		figure = new Square(20);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* parallelogram = new Parallelogram(20, 30, 30, 40);
-		std::cout << parallelogram->onCreate() << std::endl;
+		figure = new Parallelogram(20, 30, 30, 40);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
 	}
 
 	try {
-		Figure* rhombus = new Rhombus(30, 30, 40);
-		std::cout << rhombus->onCreate() << std::endl;
+		figure = new Rhombus(30, 30, 40);
+		printInfo(figure);
+		deleteFigure(figure);
 	}
 	catch (error_create_figure& error) {
 		std::cout << error.what() << std::endl;
@@ -100,7 +113,7 @@ int main() {
 }
 
 void printInfo(Figure* figure) {
-	std::cout << figure->getInfo() << std::endl << std::endl;
+	std::cout << "Фигура '" + figure->getName() + "' (" + figure->getAllLengths() + "; " + figure->getAllAngles() + ") создана!\n" << std::endl;
 }
 
 void deleteFigure(Figure* figure) {

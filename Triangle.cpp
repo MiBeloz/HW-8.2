@@ -49,7 +49,3 @@ std::string Triangle::getInfo() {
 	}
 	return getName() + ":\n" + correct + "\nКоличество сторон: " + std::to_string(getSides()) + "\n" + getAllLengths() + "\n" + getAllAngles();
 }
-
-std::string Triangle::onCreate() {
-	return getName() + "(" + getAllLengths() + "; " + getAllAngles() + ") создан!\n";
-}

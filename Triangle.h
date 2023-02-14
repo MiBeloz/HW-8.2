@@ -24,8 +24,6 @@ public:
 
 	std::string getInfo() override;
 
-	std::string onCreate() override;
-
 private:
 	int a, b, c;
 	int A, B, C;

@@ -21,8 +21,6 @@ public:
 
 	virtual std::string getInfo();
 
-	virtual std::string onCreate();
-
 protected:
 	Figure(const int _sides) { sides = _sides; }
 

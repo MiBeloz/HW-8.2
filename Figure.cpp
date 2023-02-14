@@ -30,7 +30,3 @@ std::string Figure::getInfo() {
 	}
 	return getName() + ":\n" + correct + "\nКоличество сторон: " + std::to_string(sides);
 }
-
-std::string Figure::onCreate() {
-	return "Фигура создана!\n";
-}
